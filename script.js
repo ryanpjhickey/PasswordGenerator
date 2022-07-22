@@ -11,6 +11,8 @@ const key_strings = {
 
 // Get references to the #generate element
 
+var generateBtn = document.querySelector("#generate");
+
 //then I defined generatePassword as its own function.
 
 function generatePassword() {
@@ -47,6 +49,8 @@ function generatePassword() {
   }
   return password;
 }
+
+console.log(generatePassword());
 
 // Write password to the #password input
 function writePassword() {
