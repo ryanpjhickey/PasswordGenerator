@@ -12,6 +12,7 @@ const key_strings = {
 // Get references to the #generate element
 
 var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", writePassword);
 
 //then I defined generatePassword as its own function.
 
@@ -62,4 +63,3 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
