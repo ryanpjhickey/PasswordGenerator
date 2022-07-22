@@ -1,8 +1,6 @@
 // Assignment code here
 
-// first I defined my constants
-
-generateBtn.addEventListener("click", writePassword);
+// first I defined my constantsz
 
 const key_strings = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
