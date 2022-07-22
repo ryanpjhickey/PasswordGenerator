@@ -1,6 +1,6 @@
 // Assignment code here
 
-// first I defined my constantsz
+// first I defined my constants
 
 const key_strings = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
@@ -60,5 +60,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-
 generateBtn.addEventListener("click", writePassword);
