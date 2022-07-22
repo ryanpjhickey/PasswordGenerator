@@ -12,16 +12,6 @@ const key_strings = {
 // Get references to the #generate element
 
 var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
-
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 //then I defined generatePassword as its own function.
 
@@ -60,6 +50,16 @@ function generatePassword() {
   return password;
 }
 
+console.log(generatePassword());
+
 // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
 
 // Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
