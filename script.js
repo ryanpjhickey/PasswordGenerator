@@ -11,7 +11,7 @@ const key_strings = {
 
 // Get references to the #generate element
 
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector();
 
 //then I defined generatePassword as its own function.
 
