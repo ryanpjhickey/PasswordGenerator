@@ -15,7 +15,7 @@ var generateBtn = document.querySelector("#generate");
 
 //then I defined generatePassword as its own function.
 
-function generatePassword() {
+generateBtn.onclick = function generatePassword() {
   var passwordCharSet = "";
 
   //I decided to leave length up to the user but requested 8 to 128 characters specifically. User can input more or less if desired.
@@ -49,8 +49,6 @@ function generatePassword() {
   }
   return password;
 }
-
-console.log(generatePassword());
 
 // Write password to the #password input
 function writePassword() {
