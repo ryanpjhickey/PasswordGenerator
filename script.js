@@ -2,6 +2,9 @@
 
 // first I defined my constants
 
+generateBtn.addEventListener("click", writePassword);
+
+
 const key_strings = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -60,4 +63,3 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
