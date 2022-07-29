@@ -72,3 +72,11 @@
 
   // Removed event listener to prevent function from running on page load
   removeEventListener('load', writePassword);
+
+  //sources
+  // https://stackoverflow.com/questions/61021441/random-password-generator-javascript
+  // https://stackoverflow.com/questions/68398594/check-if-all-variables-have-value-in-javascript
+  // https://www.w3schools.com/jsref/met_win_alert.asp
+  // https://stackoverflow.com/questions/6454198/check-if-a-value-is-within-a-range-of-numbers
+  // https://javascript.info/introduction-browser-events
+  // https://stackoverflow.com/questions/60713479/what-is-the-best-way-to-make-a-prompt-into-an-integer-in-js
