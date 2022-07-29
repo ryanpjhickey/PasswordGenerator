@@ -1,41 +1,42 @@
-// Assignment code here
-
-// first I defined my constants
+// Removed keystring constants
   
-  // Get references to the #generate element
+  // References Generate Element
   
   var generateBtn = document.querySelector("#generate");
   
-  //then I defined generatePassword as its own function.
+  //I defined generatePassword as its own function.
   
-  //
+  //I defined generatePassword as an event as well in order to use Event.preventDefault in order to fix "undefined" error message in code
   function generatePassword(event) {
     var passwordCharSet = "";
   
-    //I decided to leave length up to the user but requested 8 to 128 characters specifically. User can input more or less if desired.
+    //User is asked to input 8 to 128 characters.
   
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
+
+    // I used parseInt to convert the answer of the prompt from a string into an integer
     var lengthnum = parseInt(length);
 
+    //I used an if statement that checks whether the user input is between 8 and 128. If not, the code will default to the else at the bottom of the function.
     if (lengthnum >= 8 && lengthnum <= 128) {
     //Answers to the below prompts will determine whether or not to use specified characters. 
     
-    var lowercase = window.confirm("Would you like to use lowercase letters?");
+    var lowercase = window.confirm("Click OK to use lowercase letters, or Cancel to not use lowercase letters");
     if (lowercase) {
       passwordCharSet += 'qwertyuiopasdfghjklzxcvbnm';
     };
   
-    var uppercase = window.confirm("Would you like to use uppercase letters?");
+    var uppercase = window.confirm("Click OK to use uppercase letters, or Cancel to not use uppercase letters");
     if (uppercase) {
       passwordCharSet += 'QWERTYUIOPASDFGHJKLZXCVBNM';
     };
   
-    var symbols = window.confirm("Would you like to use symbols?");
+    var symbols = window.confirm("Click OK to use symbols, or Cancel to not use symbols");
     if (symbols) {
       passwordCharSet += '!@#$~`%^&*()_+{}[]-=';
     };
   
-    var numbers = window.confirm("Would you like to use numbers?");
+    var numbers = window.confirm("Click OK to use numbers, or Cancel to not use numbers");
     if (numbers) {
       passwordCharSet += '1234567890';
     };
@@ -43,19 +44,19 @@
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
+    
     return password; }
 
     else alert("Invalid Entry!");
     Event.preventDefault(generatePassword)
   }
   
-  // Write password to the #password input
+  // This is the function that occurs when the user clicks the button
+  // First it defines var "password" as the result of the generatePassword function
+  //
   function writePassword() {
     var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-  
+    document.querySelector("#password").value = password;
   }
   
   // Add event listener to generate button
