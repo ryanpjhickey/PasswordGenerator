@@ -44,6 +44,8 @@
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
     return password; }
+
+    else {Window.postMessage('Invalid Entry!')}
   }
   
   // Write password to the #password input
