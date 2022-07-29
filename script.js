@@ -46,10 +46,11 @@
     }
 
     //added if statement if all entries are null to alert the user and run Event.preventDefault to prevent undefined error message
-    if (!numbers && !symbols && !uppercase && !lowercase) {
+    if (numbers === null && symbols === null && uppercase === null && lowercase === null) {
       alert('Invalid Entry!');
       Event.preventDefault(generatePassword);
     }
+
     else
     
     return password; }
