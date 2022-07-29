@@ -44,6 +44,11 @@
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
+    if (!numbers || !uppercase || !lowercase || !symbols) {
+      alert("Invalid Entry!");
+      Event.preventDefault(generatePassword);
+    }
+    else
     
     return password; }
 
