@@ -51,7 +51,8 @@ const key_strings = {
   }
   
   // Write password to the #password input
-  function writePassword() {
+  function writePassword(event) {
+    event.preventDefault()
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
   
