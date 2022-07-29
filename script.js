@@ -46,7 +46,7 @@
     }
 
     //added if statement if all entries are null to alert the user and run Event.preventDefault to prevent undefined error message
-    if (!passwordCharSet) {
+    if (!password) {
       alert('Invalid Entry!');
       Event.preventDefault(generatePassword);
     }
