@@ -15,6 +15,7 @@ const key_strings = {
   
   //then I defined generatePassword as its own function.
   
+  
   function generatePassword() {
     var passwordCharSet = "";
   
@@ -51,8 +52,7 @@ const key_strings = {
   }
   
   // Write password to the #password input
-  function writePassword(event) {
-    event.preventDefault()
+  function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
   
@@ -62,3 +62,4 @@ const key_strings = {
   
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
+  passwordText.removeEventListener("load", writePassword)
