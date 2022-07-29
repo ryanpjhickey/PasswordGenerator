@@ -45,7 +45,7 @@
     }
     return password; }
 
-    else {Window.postMessage('Invalid Entry!')}
+    else alert("Invalid Entry!");
   }
   
   // Write password to the #password input
