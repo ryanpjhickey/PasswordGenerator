@@ -1,13 +1,6 @@
 // Assignment code here
 
 // first I defined my constants
-
-const key_strings = {
-    lowercase: 'abcdefghijklmnopqrstuvwxyz',
-    uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-    number: '0123456789',
-    symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
-  };
   
   // Get references to the #generate element
   
@@ -22,33 +15,35 @@ const key_strings = {
     //I decided to leave length up to the user but requested 8 to 128 characters specifically. User can input more or less if desired.
   
     var length = window.prompt("Enter a number from 8 to 128 for password length.");
-  
+    var lengthnum = parseInt(length);
+
+    if (lengthnum >= 8 && lengthnum <= 128) {
     //Answers to the below prompts will determine whether or not to use specified characters. 
     
     var lowercase = window.confirm("Would you like to use lowercase letters?");
     if (lowercase) {
-      passwordCharSet += key_strings.lowercase;
+      passwordCharSet += 'qwertyuiopasdfghjklzxcvbnm';
     };
   
     var uppercase = window.confirm("Would you like to use uppercase letters?");
     if (uppercase) {
-      passwordCharSet += key_strings.uppercase;
+      passwordCharSet += 'QWERTYUIOPASDFGHJKLZXCVBNM';
     };
   
     var symbols = window.confirm("Would you like to use symbols?");
     if (symbols) {
-      passwordCharSet += key_strings.symbol;
+      passwordCharSet += '!@#$~`%^&*()_+{}[]-=';
     };
   
     var numbers = window.confirm("Would you like to use numbers?");
     if (numbers) {
-      passwordCharSet += key_strings.number;
+      passwordCharSet += '1234567890';
     };
     var password = "";
     for (let i = 0; i < length; i++) {
       password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
     }
-    return password;
+    return password; }
   }
   
   // Write password to the #password input
@@ -62,4 +57,4 @@ const key_strings = {
   
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
-  passwordText.removeEventListener("load", writePassword)
+  passwordText.removeEventListener("load", writePassword);
