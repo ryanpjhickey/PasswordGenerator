@@ -8,8 +8,8 @@
   
   //then I defined generatePassword as its own function.
   
-  
-  function generatePassword() {
+  //
+  function generatePassword(event) {
     var passwordCharSet = "";
   
     //I decided to leave length up to the user but requested 8 to 128 characters specifically. User can input more or less if desired.
@@ -46,6 +46,7 @@
     return password; }
 
     else alert("Invalid Entry!");
+    Event.preventDefault(generatePassword)
   }
   
   // Write password to the #password input
