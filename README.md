@@ -1,5 +1,7 @@
 # Password Generator
 
+Simple password generator web app.
+
 ## Table of Contents
 
 - [Description](#Description)
